@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Preference
+        android:key="copyright_key"
+        android:summary="@string/pref_copyright_description"
+        android:title="@string/app_name" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="pref_kitkat_translucent_navbar"
+        android:summary="@string/kitkat_translucent_navbar_summary"
+        android:title="@string/kitkat_translucent_navbar_title" />
+    <CheckBoxPreference
+        android:key="pref_back_button_always_quits"
+        android:summary="@string/back_button_always_quits_summary"
+        android:title="@string/back_button_always_quits_title" />
+
+</PreferenceScreen>

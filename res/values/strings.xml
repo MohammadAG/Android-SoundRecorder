@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sound Recorder</string>
+    <string name="app_description">Open source Sound Recorder for Android</string>
+    <string name="pref_copyright_description">Copyright © 2014 Mohammad Abu-Garbeyyeh\nView more apps on the Play Store</string>
+
+    <!-- Recording name dialog -->
+    <string name="recording_name">Recording name</string>
+
+    <!-- Navigation drawer items -->
+    <string name="record">Record</string>
+    <string name="my_recordings">My recordings</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+
+    <!-- Content description for ImageViews -->
+    <string name="app_icon_cd">Application icon</string>
+
+    <!-- About app -->
+    <string name="developed_by">Developed by</string>
+    <string name="concept_by">Concept and design</string>
+    <string name="copyright_text">Copyright © 2014 Mohammad Abu-Garbeyyeh</string>
+
+    <!-- No idea where these are used -->
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+    <!-- UI states -->
+    <string name="touch_mic_to_start">Touch the microphone\nto start recording</string>
+    <string name="stop">Stop</string>
+    <string name="state_recording">Recording…</string>
+    <string name="no_recordings">No recordings</string>
+
+    <!-- Preferences -->
+    <string name="kitkat_translucent_navbar_title">Translucent navigation bar</string>
+    <string name="kitkat_translucent_navbar_summary">Enables navigation bar translucency on KitKat (status bar not enabled)</string>
+    <string name="back_button_always_quits_title">Back buttons always quits app</string>
+    <string name="back_button_always_quits_summary">When disabled, the back button will always go to new recordings first</string>
+    <string name="requires_restart">For this change to take effect, an app restart is required</string>
+
+    <!-- Errors -->
+    <string name="failed_to_create_dir">Failed to create directory where recordings will be saved</string>
+    <string name="file_not_found">Recording not found, removing from list</string>
+
+    <string-array name="recording_list_menu_options">
+        <item>Rename</item>
+        <item>Share</item>
+    </string-array>
+
+    <string name="recording_deleted">Recording deleted</string>
+
+</resources>

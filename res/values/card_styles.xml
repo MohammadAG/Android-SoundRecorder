@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="card_pressed">#7E0099CC</color>
+
+    <dimen name="card_outer_padding_firstlast">8dp</dimen>
+    <dimen name="card_outer_padding_top">2dp</dimen>
+    <dimen name="card_outer_padding_bottom">1dp</dimen>
+    <dimen name="card_outer_padding_horizontal">8dp</dimen>
+    <dimen name="card_inner_padding_vertical">8dp</dimen>
+    <dimen name="card_inner_padding_left">10dp</dimen>
+    <dimen name="card_inner_padding_right">5dp</dimen>
+    <dimen name="card_thumbnail">56dp</dimen>
+    <dimen name="card_thumbnail_margin">5dp</dimen>
+    <dimen name="card_title_margin_left">5dp</dimen>
+    <dimen name="card_title">18sp</dimen>
+    <dimen name="card_content">17sp</dimen>
+    <dimen name="card_shadow">3dp</dimen>
+    <dimen name="card_header">21sp</dimen>
+    <dimen name="card_subheader">15sp</dimen>
+    <dimen name="card_header_padding_top">20dp</dimen>
+    <dimen name="card_header_padding_horizontal">20dp</dimen>
+    <dimen name="card_header_button_text">13sp</dimen>
+    <dimen name="card_header_button_padding_side">8dp</dimen>
+    <dimen name="card_header_button_padding_top">5dp</dimen>
+    <dimen name="card_header_button_margin_left">10dp</dimen>
+
+    <style name="card_shadow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/card_shadow</item>
+        <item name="android:src">@drawable/card_shadow</item>
+    </style>
+
+    <style name="card_outer">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">@dimen/card_outer_padding_top</item>
+        <item name="android:paddingBottom">@dimen/card_outer_padding_bottom</item>
+        <item name="android:paddingLeft">@dimen/card_outer_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/card_outer_padding_horizontal</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+    </style>
+
+    <style name="card_inner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingLeft">@dimen/card_inner_padding_left</item>
+        <item name="android:paddingRight">@dimen/card_inner_padding_right</item>
+        <item name="android:paddingTop">@dimen/card_inner_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/card_inner_padding_vertical</item>
+        <item name="android:background">@drawable/card_selector</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+
+</resources>

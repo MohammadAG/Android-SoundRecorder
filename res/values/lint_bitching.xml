@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Placeholders for eclipse lint bitching -->
+    <string name="example_time">00:00</string>
+
+</resources>
