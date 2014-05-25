@@ -102,14 +102,14 @@ public class MainActivity extends Activity implements OnAudioLevelChangedListene
 		}
 	};
 
-	void doBindService() {
+	private void doBindService() {
 		bindService(new Intent(MainActivity.this, 
 				RecordingService.class), mConnection, Context.BIND_AUTO_CREATE);
 
 		mIsBound = true;
 	}
 
-	void doUnbindService() {
+	private void doUnbindService() {
 		if (mIsBound) {
 			unbindService(mConnection);
 			mIsBound = false;
@@ -338,6 +338,7 @@ public class MainActivity extends Activity implements OnAudioLevelChangedListene
 	@Override
 	protected void onPause() {
 		unregisterReceiver(mStateChangedReceiver);
+		doUnbindService();
 		if (mRecordingService.getRecordingMode() == RecordingMode.IDLE) {
 			mRecordingService.stopSelf();
 		}
