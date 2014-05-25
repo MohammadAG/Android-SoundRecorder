@@ -4,6 +4,7 @@
     <string name="app_name">Sound Recorder</string>
     <string name="app_description">Open source Sound Recorder for Android</string>
     <string name="pref_copyright_description">Copyright © 2014 Mohammad Abu-Garbeyyeh\nView more apps on the Play Store</string>
+    <string name="find_us_on">Find us on:</string>
 
     <!-- Recording name dialog -->
     <string name="recording_name">Recording name</string>
