@@ -9,12 +9,14 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class RoundButton extends View {
 	private static final float CIRCLE_RADIUS = 90;
 	private static final int SQUARE_WIDTH = (int) (CIRCLE_RADIUS / 2);
+	private static int mSize = 200;
 
 	private Paint mCirclePaint;
 	private Paint mInnerThingyPaint;
@@ -46,6 +48,8 @@ public class RoundButton extends View {
 
 	public void init(Context context) {
 		mPlayBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_action_play);
+		mSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 70,
+				context.getResources().getDisplayMetrics());
 	}
 
 	public boolean isDown() {
@@ -104,10 +108,12 @@ public class RoundButton extends View {
 			mCirclePaint = new Paint();
 			mCirclePaint.setColor(Color.GRAY);
 			mCirclePaint.setStyle(Paint.Style.STROKE);
+			mCirclePaint.setAntiAlias(true);
 			mCirclePaint.setStrokeWidth(1);
 
 			mInnerThingyPaint = new Paint();
 			mInnerThingyPaint.setColor(Color.BLACK);
+			mInnerThingyPaint.setAntiAlias(true);
 			mInnerThingyPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 			mInnerThingyPaint.setStrokeWidth(1);
 
@@ -157,14 +163,14 @@ public class RoundButton extends View {
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
-		mScaledBitmap = Bitmap.createScaledBitmap(mPlayBitmap, getWidth() / 3, getHeight()/3, false);
+		mScaledBitmap = Bitmap.createScaledBitmap(mPlayBitmap, mSize / 3, mSize / 3, false);
 	}
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		setMeasuredDimension(200, 200);
-		if (mScaledBitmap == null && !isInEditMode())
-			mScaledBitmap = Bitmap.createScaledBitmap(mPlayBitmap, getWidth() / 3, getHeight()/3, false);
+		setMeasuredDimension(mSize, mSize);
+		if (mScaledBitmap == null && !isInEditMode() && mSize > 0)
+			mScaledBitmap = Bitmap.createScaledBitmap(mPlayBitmap, mSize / 3, mSize / 3, false);
 	}
 
 	private static boolean isInCircle(float x, float y, float circleCenterX, float circleCenterY, float circleRadius) {
